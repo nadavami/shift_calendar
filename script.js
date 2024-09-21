@@ -168,8 +168,8 @@ function addPatternRow(defaultRow = false) {
   const row = document.createElement("tr");
 
   row.innerHTML = `
-        <td><input type="number" name="on-days" placeholder="Days On" required></td>
-        <td><input type="number" name="off-days" placeholder="Days Off" required></td>
+        <td><input type="number" name="on-days" placeholder="Days" required></td>
+        <td><input type="number" name="off-days" placeholder="Days" required></td>
         <td>
             <input type="radio" name="pattern-index" ${
               defaultRow ? "checked" : ""
