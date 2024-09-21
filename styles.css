@@ -36,9 +36,12 @@ a {
     padding: 10px;
     margin-top: 5px;
     font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-a,button {
+a,
+button {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -46,7 +49,8 @@ a,button {
     margin-top: 20px;
 }
 
-a:hover,button:hover {
+a:hover,
+button:hover {
     background-color: #45a049;
 }
 
@@ -61,10 +65,18 @@ td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
+    font-size: 1em;
+    word-break: break-word;
 }
 
 th {
     background-color: #f4f4f4;
+}
+
+input[name="on-days"],
+input[name="off-days"] {
+    width: 8ch;
+    box-sizing: border-box;
 }
 
 .remove-row-btn {
@@ -89,19 +101,29 @@ th {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     margin: 20px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .calendar-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .calendar-wrapper {
+        grid-template-columns: 1fr;
+    }
 }
 
 .calendar-container {
     border: 1px solid #ccc;
     padding: 10px;
-    text-align: center;
     background-color: #fff;
+    text-align: center;
     box-sizing: border-box;
-}
-
-.month-header {
-    font-weight: bold;
-    margin-bottom: 10px;
 }
 
 .calendar-grid {
@@ -122,10 +144,15 @@ th {
     background-color: #fff;
     height: 25px;
     border: 1px solid #ddd;
+    box-sizing: border-box;
 }
 
 .shift-day {
     background-color: #4CAF50;
     color: white;
     font-weight: bold;
+}
+
+#preview-calendar {
+    word-wrap: break-word;
 }
