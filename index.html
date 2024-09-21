@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotational Shift Calendar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Rotational Shift Calendar Generator</h1>
+    <form id="shift-form">
+      <label for="start-date">Start Date:</label>
+      <input type="date" id="start-date" name="start-date" required>
+
+      <label for="end-year">End Year:</label>
+      <input type="number" id="end-year" name="end-year" placeholder="End year">
+
+      <label for="pattern-table">Shift Pattern:</label>
+      <table id="pattern-table">
+        <thead>
+          <tr>
+            <th>Days On</th>
+            <th>Days Off</th>
+            <th>Starting Point</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows will be added dynamically -->
+        </tbody>
+      </table>
+      <button type="button" id="add-row-btn">Add Row</button>
+
+      <label for="event-name">Event Name (optional):</label>
+      <input type="text" id="event-name" name="event-name" placeholder="My Shift">
+
+      <button type="submit">Generate Calendar</button>
+    </form>
+
+    <a id="download-link" style="display:none;">Download Calendar</a>
+
+    <div id="preview-calendar"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
