@@ -203,7 +203,9 @@ document.getElementById("shift-form").addEventListener("submit", (event) => {
   );
   const endYear =
     document.getElementById("end-year").value || startDate.getFullYear();
-  const eventName = document.getElementById("event-name").value;
+
+  const eventNameInput = document.getElementById("event-name");
+  const eventName = eventNameInput.value || eventNameInput.placeholder;
 
   const rows = document.querySelectorAll("#pattern-table tbody tr");
   const pattern = Array.from(rows).map((row) => {
